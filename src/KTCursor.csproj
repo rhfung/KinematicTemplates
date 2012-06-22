@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8F67C7FF-20FA-481E-AB4C-C8CC12030A1C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KinTemplates.Cursor</RootNamespace>
+    <AssemblyName>KTCursor</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>kin_templates.key.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FilterManager.cs" />
+    <Compile Include="Logger\IMouseLogger.cs" />
+    <Compile Include="Logger\MouseLogger.cs" />
+    <Compile Include="Logger\MouseNoLogger.cs" />
+    <Compile Include="PointD.cs" />
+    <Compile Include="Position\IVirtualMousePosition.cs" />
+    <Compile Include="Position\ParameterizedMousePosition.cs" />
+    <Compile Include="Position\RadialMousePosition.cs" />
+    <Compile Include="Position\VirtualBoundedMousePosition.cs" />
+    <Compile Include="Position\VirtualMousePosition.cs" />
+    <Compile Include="PrecisionTimer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadialPointD.cs" />
+    <Compile Include="Tools\CompassFilter.cs" />
+    <Compile Include="Tools\ConveyorBeltFilter.cs" />
+    <Compile Include="Tools\ConveyorBeltFilter2.cs" />
+    <Compile Include="Tools\CorduroyFilter.cs" />
+    <Compile Include="Tools\DimpleChadFilter.cs" />
+    <Compile Include="Tools\Render\DefaultDrawVisitor.cs" />
+    <Compile Include="Tools\Render\DrawHelper.cs" />
+    <Compile Include="Tools\FakeHatchingFilter.cs" />
+    <Compile Include="Tools\FilterUID.cs" />
+    <Compile Include="Tools\FurFilter.cs" />
+    <Compile Include="Tools\GridFilter.cs" />
+    <Compile Include="Tools\HillFilter.cs" />
+    <Compile Include="Tools\HoleFilter.cs" />
+    <Compile Include="Tools\IceSheetFilter.cs" />
+    <Compile Include="Tools\InertiaFilter.cs" />
+    <Compile Include="Tools\IToolFilter.cs" />
+    <Compile Include="Tools\LineToolFilter.cs" />
+    <Compile Include="Tools\MagneticLineAttractionFilter.cs" />
+    <Compile Include="Tools\MagneticLineRepulsionFilter.cs" />
+    <Compile Include="Tools\MagneticPointAttractionFilter.cs" />
+    <Compile Include="Tools\MaxFilter.cs" />
+    <Compile Include="Tools\MinFilter.cs" />
+    <Compile Include="Tools\Model\AspectRatioToolParameter.cs" />
+    <Compile Include="Tools\Model\BitmapPath.cs" />
+    <Compile Include="Tools\Model\IPath.cs" />
+    <Compile Include="Tools\Model\PathShape.cs" />
+    <Compile Include="Tools\Model\RegionToolParameter.cs" />
+    <Compile Include="Tools\Model\ToolParameter.cs" />
+    <Compile Include="Tools\Model\VectorPath.cs" />
+    <Compile Include="Tools\OrbitFilter.cs" />
+    <Compile Include="Tools\OrbitFilter2.cs" />
+    <Compile Include="Tools\OrbitFilter3.cs" />
+    <Compile Include="Tools\PointToolFilter.cs" />
+    <Compile Include="Tools\RegionToolFilter.cs" />
+    <Compile Include="Tools\RegionToolPathFilter.cs" />
+    <Compile Include="Tools\RegionToolRegionFilter.cs" />
+    <Compile Include="Tools\Render\IDrawVisitor.cs" />
+    <Compile Include="Tools\Render\RenderParameter.cs" />
+    <Compile Include="Tools\Render\FeedbackParameter.cs" />
+    <Compile Include="Tools\Render\FeedbackState.cs" />
+    <Compile Include="Tools\Render\OnlineFeedback.cs" />
+    <Compile Include="Tools\Render\RenderType.cs" />
+    <Compile Include="Tools\Render\StaticFeedback.cs" />
+    <Compile Include="Tools\RubberBandFilter.cs" />
+    <Compile Include="Tools\SandpaperFilter.cs" />
+    <Compile Include="Tools\SandpaperImageFilter.cs" />
+    <Compile Include="Tools\SpeedPreservingHatchingFilter.cs" />
+    <Compile Include="Tools\SteadyHandFilter.cs" />
+    <Compile Include="Tools\TunnelLineFilter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="kin_templates.key.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
