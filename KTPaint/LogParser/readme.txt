@@ -11,14 +11,17 @@ http://www.rhfung.com/core/Projects/KinematicTemplates
 
 Requires:
 
-Microsoft Visual C# 2010 or higher
+* Microsoft Visual C# 2010 or higher
+* Microsoft .NET Framework 3.5
 
 Target:
 
-Windows WPF application
+* Windows WPF application
+* Starts as a console application
 
 Includes:
 
+/bin         compiled project for .NET Framework 3.5
 /src         source code (GNU License)
 /examples    example log files from Kinematic Templates
 
